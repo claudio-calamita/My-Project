@@ -105,14 +105,15 @@ Naples is structured in Municipalities and Neighborhoods. There are 10 municipal
 
  As I mentioned the idea is to cluster municipality by venues, analyze the features of clusters. Then do a heat-map for the area of investment described previously and for every area find what is the best place to invest using density map or contour map.
 
-
-
 \chapter*{Data collection and Understanding}
 \addcontentsline{toc}{chapter}{Data Collection and Understanding}
 \label{ch:dataCollection}
-In this chapter we will see the collection of the data and the analysis of them. It's a fundamental step for preparing to modeling the problem. 
+In this chapter we will see the collection of the data and the analysis of them. It's a fundamental step for preparing to modeling the problem.\\
+ 
+The graphs in this chapter and next will be done using matplotlib, a data visualization library in Python.
 
 \section*{Analyze economy of the city} 
+\addcontentsline{toc}{section}{Analyze economy of the city}
 \label{sec:economy_city}
 Naples is Italy's fourth-largest economy after Milan, Rome and Turin, and is the world's 103rd-largest urban economy by purchasing power, with an estimated 2011 GDP of US dollar 83.6 billion, equivalent to $\$$ 28749 per-capita. 
 
@@ -128,9 +129,10 @@ Figure \ref{fig:df_economy} shows how is distributed the economy of the city. In
 		\caption{Dataframe describing economy of the city. }
 		\label{fig:df_economy}
 	\end{figure}
-
+\clearpage
 
 \section*{Build dataframe for Municipalities and Neighborhoods} 
+\addcontentsline{toc}{section}{Build dataframe for Municipalities and Neighborhoods}
 \label{sec:df_municipality}
 The dataset for municipalities and neighborhoods is scraped from Wikipedia\cite{municipalities} using the Python library BeautifulSoap and imported in the notebook as a Pandas dataframe\footnote{Pandas is a fundamental Python library for data analysis. A dataframe is data structure that can be imagined as a table with indices for rows and columns.}. In figure \ref{fig:df_mun_raw} you can see the raw data imported as a dataframe.
 This dataset should be cleaned ad adjusted to be usable. Let's drop the columns "Presidente" indicatind the president for municipality (of no use in this case) and "Mappa" which contained the maps of each municipality in Wikipedia as images (clearly the images are not scraped). Then we should add a referring for latitude and longitude of every municipality. For that I download the open-data \cite{opendata} and I extracted the centroids of the polygons of municipalities to get the referring coordinates. As seen in the chapter "Data Requirements" I did it with the open source software QGIS and used the library shapefile of Python to read the centroids saved locally and then updated in my github\cite{dataset}.  
@@ -165,8 +167,9 @@ Let's import also the boundaries in the same manner as centroids (the dataset is
 		\label{fig:map_municipality}
 	\end{figure}
 
-
-\section*{Extract climate data} 
+\clearpage
+\section*{Extract climate data}
+ \addcontentsline{toc}{section}{Extract climate data}
 \label{sec:climate}
 As I mentioned previously, Naples is a city with a very mild climate. Let's see it. I scraped the data from a website \cite{climate} and in figure \ref{fig:df_climate} you can see a dataframe for climate data.
 
@@ -185,7 +188,7 @@ In figure \ref{fig:np_temp_rain} I reported the trend for averae temperature in 
 
 \begin{figure}[!htb]
 		\centering
-		\scalebox{0.4}[0.45]{\includegraphics{immagini/np_temp_rain.png}}
+		\scalebox{0.35}[0.4]{\includegraphics{immagini/np_temp_rain.png}}
 		\caption{Trend for average temperature in degrees centigrade (left) and barplot for rainfall in mm (right).}
 		\label{fig:np_temp_rain}
 	\end{figure}
@@ -194,12 +197,58 @@ In order to have a better idea of these data let's do a comparison with another 
 
 \begin{figure}[!htb]
 		\centering
-		\scalebox{0.4}[0.45]{\includegraphics{immagini/ny_temp_rain.png}}
+		\scalebox{0.35}[0.4]{\includegraphics{immagini/ny_temp_rain.png}}
 		\caption{Trend for average temperature in degrees centigrade (left) and barplot for rainfall in mm (right).}
 		\label{fig:ny_temp_rain}
 	\end{figure}
 
-We can see that Naples has generally an higher temperature over $10~ ^{\circ} C$ and a lower rainfall than New York
+We can see that Naples has generally an higher temperature over $10~ ^{\circ}$C and a lower rainfall than New York.
+
+\section*{Descriptive analysis}
+ \addcontentsline{toc}{section}{Descriptive analysis}
+\label{sec:descr_analysis}
+Let's consider again the dataframe extracted for municipalities and let's do a describe of this dataframe (figure \ref{fig:describe})
+
+
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.45}[0.5]{\includegraphics{immagini/describe.png}}
+		\caption{A statistical description of the dataframe for municipalities.}
+		\label{fig:describe}
+	\end{figure}
+
+
+These data show a mean density of population of $\sim 10000$ people per $km^2$, a very high number for density.
+
+Let's do now some bar plot to deepen these data. 
+
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.45}[0.5]{\includegraphics{immagini/barplots.png}}
+		\caption{Bar plots for several variables of the dataframe of municipalities.}
+		\label{fig:barplots}
+	\end{figure}
+
+From the figure \ref{fig:barplots}  we can note that population is concentrated primarily in municipality with lower surface (Black and red graphs up to municipality 5. The black graph grows from municipality 5 while red graph is almost constant). So in this area there is a greater density of population (green graph). There is a greater number of neighborhoods for second municipality that shows 6 neighborhoods and $\sim 20000$ people per $km^2$.
+Let's do a scatter plot to better highlight these features. In figure \ref{fig:population_surface} there is a net separation at 12 $km^2$. 
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.5}[0.55]{\includegraphics{immagini/population_surface.png}}
+		\caption{Scatter plot of Population Versus surface of municipalities.}
+		\label{fig:population_surface}
+	\end{figure}
+
+If we count the overall population at this cut value we find: 
+\begin{itemize}
+\item Population in municipality with Surface lower than 12 $km^2$: 585358.
+\item Population in municipality with Surface greater than 12 $km^2$: 438748.
+\end{itemize}
+
+
+
 
 \begin{thebibliography}{9}
 \bibitem{Teleport} 

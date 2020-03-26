@@ -2,3 +2,7 @@
 \contentsline {chapter}{Introduction}{1}{chapter*.2}
 \contentsline {chapter}{Data Requirements}{2}{chapter*.3}
 \contentsline {chapter}{Data Collection and Understanding}{4}{chapter*.5}
+\contentsline {section}{Analyze economy of the city}{4}{section*.6}
+\contentsline {section}{Build dataframe for Municipalities and Neighborhoods}{5}{section*.8}
+\contentsline {section}{Extract climate data}{7}{section*.12}
+\contentsline {section}{Descriptive analysis}{8}{section*.16}

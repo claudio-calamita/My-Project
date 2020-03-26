@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.27)  26 MAR 2020 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.27)  26 MAR 2020 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -987,7 +987,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 43.
 
 Package gensymb Warning: Not defining \micro.
 
-<frontespizio.pdf, id=16, 614.295pt x 794.97pt>
+<frontespizio.pdf, id=32, 614.295pt x 794.97pt>
 File: frontespizio.pdf Graphic file (type pdf)
  <use frontespizio.pdf>
 Package pdftex.def Info: frontespizio.pdf used on input line 44.
@@ -997,7 +997,7 @@ File: frontespizio.pdf Graphic file (type pdf)
 <use frontespizio.pdf>
 Package pdftex.def Info: frontespizio.pdf used on input line 44.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
- <frontespizio.pdf, id=19, page=1, 614.295pt x 794.97pt>
+ <frontespizio.pdf, id=35, page=1, 614.295pt x 794.97pt>
 File: frontespizio.pdf Graphic file (type pdf)
 
 <use frontespizio.pdf, page 1>
@@ -1023,7 +1023,33 @@ Package pdftex.def Info: frontespizio.pdf, page1 used on input line 44.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [1
 
- <./frontespizio.pdf>] (./Report.toc)
+ <./frontespizio.pdf>] (./Report.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 5.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 5.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+))
 \tf@toc=\write6
 \openout6 = `Report.toc'.
 
@@ -1064,31 +1090,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 74.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 74.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
@@ -1110,7 +1112,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<immagini/qgis_boundaries.jpg, id=69, 1445.4pt x 837.1275pt>
+<immagini/qgis_boundaries.jpg, id=89, 1445.4pt x 837.1275pt>
 File: immagini/qgis_boundaries.jpg Graphic file (type jpg)
 
 <use immagini/qgis_boundaries.jpg>
@@ -1134,125 +1136,161 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
  [2
 
 ] [3 <./immagini/qgis_boundaries.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-<immagini/dataframe_economics.jpg, id=94, 936.49875pt x 67.25125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+<immagini/dataframe_economics.jpg, id=114, 936.49875pt x 67.25125pt>
 File: immagini/dataframe_economics.jpg Graphic file (type jpg)
 
 <use immagini/dataframe_economics.jpg>
 Package pdftex.def Info: immagini/dataframe_economics.jpg used on input line 12
-7.
+8.
 (pdftex.def)             Requested size: 936.49646pt x 67.25107pt.
+ [4
 
-Overfull \hbox (11.7529pt too wide) in paragraph at lines 133--133
+ <./immagini/dataframe_economics.jpg>]
+Overfull \hbox (11.7529pt too wide) in paragraph at lines 134--134
 [][]\T1/cmr/bx/n/17.28 Build dataframe for Mu-nic-i-pal-i-ties and Neigh-bor-ho
 ods 
  []
 
-[4
-
- <./immagini/dataframe_economics.jpg>]
-<immagini/df_mun_raw.png, id=111, 1012.78375pt x 419.5675pt>
+<immagini/df_mun_raw.png, id=127, 1012.78375pt x 419.5675pt>
 File: immagini/df_mun_raw.png Graphic file (type png)
 
 <use immagini/df_mun_raw.png>
-Package pdftex.def Info: immagini/df_mun_raw.png used on input line 140.
+Package pdftex.def Info: immagini/df_mun_raw.png used on input line 142.
 (pdftex.def)             Requested size: 1012.78128pt x 419.56647pt.
 
-Overfull \hbox (28.95712pt too wide) in paragraph at lines 140--141
+Overfull \hbox (28.95712pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
-<immagini/df_mun_cleaned.png, id=114, 1003.75pt x 340.27126pt>
+<immagini/df_mun_cleaned.png, id=130, 1003.75pt x 340.27126pt>
 File: immagini/df_mun_cleaned.png Graphic file (type png)
 
 <use immagini/df_mun_cleaned.png>
-Package pdftex.def Info: immagini/df_mun_cleaned.png used on input line 150.
+Package pdftex.def Info: immagini/df_mun_cleaned.png used on input line 152.
 (pdftex.def)             Requested size: 1003.74756pt x 340.27042pt.
 
-Overfull \hbox (24.89198pt too wide) in paragraph at lines 150--151
+Overfull \hbox (24.89198pt too wide) in paragraph at lines 152--153
  [][] 
  []
 
-<immagini/map_municipality.png, id=117, 788.9475pt x 538.01pt>
+<immagini/map_municipality.png, id=133, 788.9475pt x 538.01pt>
 File: immagini/map_municipality.png Graphic file (type png)
 
 <use immagini/map_municipality.png>
-Package pdftex.def Info: immagini/map_municipality.png used on input line 163.
+Package pdftex.def Info: immagini/map_municipality.png used on input line 165.
 (pdftex.def)             Requested size: 788.94556pt x 538.00868pt.
- [5 <./immagini/df_mun_raw.png> <./immagini/df_mun_cleaned.png>]
-<immagini/df_climate.png, id=129, 677.53125pt x 373.395pt>
+ [5
+
+ <./immagini/df_mun_raw.png>] [6 <./immagini/df_mun_cleaned.png> <./immagini/ma
+p_municipality.png>]
+<immagini/df_climate.png, id=153, 677.53125pt x 373.395pt>
 File: immagini/df_climate.png Graphic file (type png)
 
 <use immagini/df_climate.png>
-Package pdftex.def Info: immagini/df_climate.png used on input line 177.
+Package pdftex.def Info: immagini/df_climate.png used on input line 180.
 (pdftex.def)             Requested size: 677.52959pt x 373.39409pt.
- [6 <./immagini/map_municipality.png> <./immagini/df_climate.png>] <immagini/np
-_temp_rain.png, id=140, 1027.84pt x 498.86375pt>
+
+<immagini/np_temp_rain.png, id=155, 1027.84pt x 498.86375pt>
 File: immagini/np_temp_rain.png Graphic file (type png)
 
 <use immagini/np_temp_rain.png>
-Package pdftex.def Info: immagini/np_temp_rain.png used on input line 188.
+Package pdftex.def Info: immagini/np_temp_rain.png used on input line 191.
 (pdftex.def)             Requested size: 1027.8375pt x 498.86253pt.
 
-<immagini/ny_temp_rain.png, id=142, 1003.75pt x 473.77pt>
+<immagini/ny_temp_rain.png, id=157, 1003.75pt x 473.77pt>
 File: immagini/ny_temp_rain.png Graphic file (type png)
 
 <use immagini/ny_temp_rain.png>
-Package pdftex.def Info: immagini/ny_temp_rain.png used on input line 197.
+Package pdftex.def Info: immagini/ny_temp_rain.png used on input line 200.
 (pdftex.def)             Requested size: 1003.74756pt x 473.76884pt.
- [7 <./immagini/np_temp_rain.png> <./immagini/ny_temp_rain.png>] [8]
-Overfull \hbox (21.07994pt too wide) in paragraph at lines 215--216
+ [7
+
+ <./immagini/df_climate.png> <./immagini/np_temp_rain.png>] <immagini/describe.
+png, id=169, 644.4075pt x 266.9975pt>
+File: immagini/describe.png Graphic file (type png)
+
+<use immagini/describe.png>
+Package pdftex.def Info: immagini/describe.png used on input line 216.
+(pdftex.def)             Requested size: 644.40593pt x 266.99683pt.
+
+<immagini/barplots.png, id=170, 929.4725pt x 492.84125pt>
+File: immagini/barplots.png Graphic file (type png)
+
+<use immagini/barplots.png>
+Package pdftex.def Info: immagini/barplots.png used on input line 229.
+(pdftex.def)             Requested size: 929.47025pt x 492.84003pt.
+
+<immagini/population_surface.png, id=173, 439.6425pt x 282.05376pt>
+File: immagini/population_surface.png Graphic file (type png)
+
+<use immagini/population_surface.png>
+Package pdftex.def Info: immagini/population_surface.png used on input line 239
+.
+(pdftex.def)             Requested size: 439.64142pt x 282.05305pt.
+ [8 <./immagini/ny_temp_rain.png> <./immagini/describe.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 246.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 246.
+ [9 <./immagini/barplots.png> <./immagini/population_surface.png>]
+Overfull \hbox (21.07994pt too wide) in paragraph at lines 264--265
 []\T1/cmr/m/n/12 (-20) http://www.comune.napoli.it/flex/cm/pages/ServeBLOB.php/
 L/IT/IDPagina/26531 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
-[9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
+[10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 51368B3DD61717CFE2E9D9A8C6490337;170.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: D3C27763387E397301116904E25B3D74;475.
  ) 
 Here is how much of TeX's memory you used:
- 13192 strings out of 493014
- 197879 string characters out of 6133350
- 341696 words of memory out of 5000000
- 16299 multiletter control sequences out of 15000+600000
- 35008 words of font info for 130 fonts, out of 8000000 for 9000
+ 13244 strings out of 493014
+ 198847 string characters out of 6133350
+ 342027 words of memory out of 5000000
+ 16334 multiletter control sequences out of 15000+600000
+ 35175 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,43p,885b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Report.pdf (11 pages, 1291193 bytes).
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/helvetic/uhvb8a.pfb>
+Output written on Report.pdf (12 pages, 1365815 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 26197 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 26244 words of extra memory for PDF output out of 29859 (max. 10000000)
 
