@@ -5,3 +5,9 @@
 \BOOKMARK [1][-]{section*.8}{Build dataframe for Municipalities and Neighborhoods}{chapter*.5}% 5
 \BOOKMARK [1][-]{section*.12}{Extract climate data}{chapter*.5}% 6
 \BOOKMARK [1][-]{section*.16}{Descriptive analysis}{chapter*.5}% 7
+\BOOKMARK [1][-]{section*.20}{Foursquare API data collection}{chapter*.5}% 8
+\BOOKMARK [0][-]{chapter*.23}{Model Clustering Neighborhoods}{}% 9
+\BOOKMARK [1][-]{section*.24}{Determining the best value for k}{chapter*.23}% 10
+\BOOKMARK [1][-]{section*.26}{Evaluating the model}{chapter*.23}% 11
+\BOOKMARK [0][-]{chapter*.28}{Results}{}% 12
+\BOOKMARK [0][-]{chapter*.32}{Conclusion}{}% 13

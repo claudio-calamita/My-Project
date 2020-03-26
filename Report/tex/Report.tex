@@ -40,18 +40,19 @@
 \usepackage{pdfpages}
 \usepackage{gensymb}
 
+
 \begin{document}
 \includepdf{frontespizio.pdf} %aggiunge frontespizio
 \setcounter{page}{1}
 \pagenumbering{roman}
 \tableofcontents %%indice
 
-
 \chapter*{Introduction}
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
 \addcontentsline{toc}{chapter}{Introduction}
+\markboth{}{}
 \label{ch:Introduction}
 Naples is the city where I was born. It is in Italy and is a wonderful city, near the sea and with a mild climate.\\ 
 
@@ -247,8 +248,143 @@ If we count the overall population at this cut value we find:
 \item Population in municipality with Surface greater than 12 $km^2$: 438748.
 \end{itemize}
 
+Since the Municipality II has a surface of $\sim 4~km^2$ and a density in population of $\sim 20\cdot10^3~km^2$ it could be a good candidate for an eventual investment in commerce area. 
+
+\section*{Foursquare API data collection}
+ \addcontentsline{toc}{section}{Foursquare API data collection}
+\label{sec:foursquare}
+Using the Foursquare API I can do some requests to get some information starting from a coordinate. I can do an "explore" query to get all the venues in a certain range starting from a coordinate. Considering every coordinate extracted previously from shapefiles and doing an explore request on the API for each of it we can get all the venues for Naples city according Foursquare. In figure \ref{fig:explore} there is the dataframe with all the venues extracted, the category and coordinates. There are 377 venues. 
 
 
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.45}[0.5]{\includegraphics{immagini/explore.png}}
+		\caption{Dataframe for venues in Naples city according Foursquare API.}
+		\label{fig:explore}
+	\end{figure}
+
+Then let's group rows by neighborhood and by taking the mean of the frequency of occurrence of each category. At the end we can display the top 10 venues for each municipality. In figure \ref{fig:venues} is visible a dataframe with venues for all municipalities.\\
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.5}[0.5]{\includegraphics{immagini/venues.png}}
+		\caption{Dataframe for top 10 venues for every municipality according Foursquare API.}
+		\label{fig:venues}
+	\end{figure}
+
+
+This dataframe concludes the data preparation and now is possible the creation of the model.
+
+
+\chapter*{Model Clustering Neighborhoods}
+\addcontentsline{toc}{chapter}{Model Clustering Neighborhoods}
+\label{ch:modelClustering}
+The data are modeled using a clustering algorithm. I used a clustering K-means alghoritm. This is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster\cite{clustering}.\\
+
+The centroids are initialized with casual values and updated in an iterative way every time the cluster are determined up to a tolerance value. The problem with this algorithm is it is dependent from the starting points as centroids so it could give different answers every time it is applied.\\
+
+I used the implementation of this algorithm in the Python library Sklearn. 
+
+\section*{Determining the best value for k}
+ \addcontentsline{toc}{section}{Determining the best value for k}
+\label{sec:k}
+In order to find the best k, is applied the Elbow method \cite{elbow} that considers the sum of distances of points from clusters varying the value of the number of clusters k.\\
+
+I did it and the best value for k is 4 as you can see in figure \ref{fig:bestK}
+
+
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.65}[0.65]{\includegraphics{immagini/bestK.png}}
+		\caption{Best value of K for cluster K-means using Elbow method.}
+		\label{fig:bestK}
+	\end{figure}
+
+
+\section*{Evaluating the model}
+ \addcontentsline{toc}{section}{Evaluating the model}
+\label{sec:model_eval}
+
+After having done clustering of the data we can see the clusters on the map and the features they have. Figure, \ref{fig:clusters} shows how municipalities are clusterized.
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.5}[0.55]{\includegraphics{immagini/clusters.png}}
+		\caption{Map showing clusters of municipalities.}
+		\label{fig:clusters}
+	\end{figure}
+
+The figure shows 3 clusters on the periphery of the city characterized by train stations, parks, supermarkets, bakery.\\
+
+Then there is another big cluster characterized by venues that are hotels, pizza place, coffe and cocktails shop. It is the storic center of the city with museums. It is the part of the city more alive. So it could be a good candidate for an investment. But let's analyze it with more precision in the next chapter. 
+
+\chapter*{Results}
+\addcontentsline{toc}{chapter}{Results}
+\label{ch:results}
+
+Let's analyze the model in this section. So I employ heatmaps and histo2d to find the "hottest" area for a good investment for an hotel, for a restaurant, for a pizza place or coffee and cocktails shop.\\
+
+For each one of these activities I do a query on Foursquari API for category as "search" to get the venues for every activity.\\
+
+I extract the coordinates of each venue and I do a heatmap with Folium to see where is the hottest zone for a specific category. Then I do 2d histogram, a density plot and a contour plot to get for every activity the best position for the investment.\\
+
+I map the latitude and longitude in a plane (an approximation for little area). Then I get the max for the distributions of latitude and longitude and that could be a reasonable estimation for the most likely position, where the same activities are concentrated.\\
+
+The figure \ref{fig:hotel_density} shows the scatter, histo2d, kde density, contour plots for latitude and longitude, for the category hotel.
+
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.5}[0.55]{\includegraphics{immagini/hotel_density.png}}
+		\caption{Scatter, histo2d, kde density, contour plots for latitude and longitude, for the category hotel.}
+		\label{fig:hotel_density}
+	\end{figure}
+\clearpage
+The figure \ref{fig:hotel_map} shows clusters, the heat-map map and the best location (in black) for hotel category.
+
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.45}[0.5]{\includegraphics{immagini/hotel_map.png}}
+		\caption{Clusters, the heat-map and the best location for hotel category (in black).}
+		\label{fig:hotel_map}
+	\end{figure}
+
+We can do the same analysis for other categories. I did it for the categories: hotel, pizza, restaurant, coffee, cocktails.\\
+
+In figure \ref{fig:finalResult} I show the best locations.
+\begin{figure}[!htb]
+		\centering
+		\scalebox{0.5}[0.55]{\includegraphics{immagini/finalResult.png}}
+		\caption{Best locations for the categories: hotel, pizza, restaurant, coffee, cocktails.}
+		\label{fig:finalResult}
+	\end{figure}
+
+\clearpage
+
+The points on the map could constitute a polygon for a very reasonable area for a good investment. It is located in municipality 2 which as we considered at the beginning was a good candidate for an investment.
+Indeed, it is the historic part of the city, full of museums, it is a short area $\sim 4 ~ km^2$ but with an high density of population 20000 people per $km^2$. It is near the sea and is an attraction for tourists. 
+
+
+\clearpage
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+\label{ch:conclusion}
+In this project I analyzed the city where I was born. A beautiful city that needs to be relaunched with tourism, with investments. This is a city with a very good climate, mild. A city of sea, with very good food everywhere you see. It is a city with a very high density of population so everywhere you invest in a local it is always full of people.\\
+
+The city is structured in municipalities and neighborhoods. 
+I used open data to get information about municipality, for boundaries and centroids.\\
+
+I used Foursquare API to get data about venues. I clustered municipality. I found 4 clusters. 3 are in the residential zone of the city, made up of train station, parks, bakery, supermarket. 1 of that is full of restaurants, hotels, pizza place, coffee and cocktails shop.\\
+
+I plotted on heat-map these activities and found the best location, that more likely using histo 2d plot and contour plot. \\
+
+I plotted all the best places on a map. These constitute a polygon. That could be a very reasonable area fora good investment. \\
+
+This area is located in Municipality 2, the shortest with 4 squared kilometers but with a very very high density of population, ~20000 people per squared kilometer. \\
+
+The analysis can be further extended going to consider other categories as food, gym or deepen those already considered as doing a research for a better location of Italian restaurant, Chinese restaurant and so on.
 
 \begin{thebibliography}{9}
 \bibitem{Teleport} 
@@ -269,5 +405,10 @@ https://en.climate-data.org/europe/italy/campania/naples-4561/
 \bibitem{dataset}
 https://github.com/claudio$-$calamita/Coursera$\_$Capstone/tree/master/dataset
 
+\bibitem{clustering}
+https://en.wikipedia.org/wiki/K$-$means$\_$clustering
+
+\bibitem{elbow}
+https://blog.cambridgespark.com/how-to-determine-the-optimal-number-of-clusters-for-k-means-clustering-14f27070048f
 \end{thebibliography}
 \end{document}

@@ -6,3 +6,9 @@
 \contentsline {section}{Build dataframe for Municipalities and Neighborhoods}{5}{section*.8}
 \contentsline {section}{Extract climate data}{7}{section*.12}
 \contentsline {section}{Descriptive analysis}{8}{section*.16}
+\contentsline {section}{Foursquare API data collection}{10}{section*.20}
+\contentsline {chapter}{Model Clustering Neighborhoods}{12}{chapter*.23}
+\contentsline {section}{Determining the best value for k}{12}{section*.24}
+\contentsline {section}{Evaluating the model}{13}{section*.26}
+\contentsline {chapter}{Results}{14}{chapter*.28}
+\contentsline {chapter}{Conclusion}{17}{chapter*.32}
